@@ -1,0 +1,46 @@
+.toggle_container {
+  width: 44px;
+  height: 20px;
+  background-color: var(--grey);
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &.checked {
+    .toggle_track {
+      background-color: var(--green);
+    }
+
+    .toggle_thumb {
+      transform: translateX(25px);
+    }
+  }
+}
+
+.toggle_track {
+  width: 100%;
+  height: 100%;
+  background-color: var(--grey);
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  border: 0.6px solid #afc6bd;
+  display: flex;
+}
+
+.toggle_thumb {
+  aspect-ratio: 1;
+  height: 100%;
+  background-color: #f9f9f9;
+  border: 0.6px solid #f2ebdb;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s ease;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0 0 0 4px var(--lightGreen);
+  }
+}

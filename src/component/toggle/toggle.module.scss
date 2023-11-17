@@ -11,6 +11,7 @@
   &.checked {
     .toggle_track {
       background-color: var(--green);
+      border: 0.6px solid #b0b0b0;
     }
 
     .toggle_thumb {

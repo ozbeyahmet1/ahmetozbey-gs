@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom/extend-expect"; // for extra matchers
 import { fireEvent, render } from "@testing-library/react";
 
-import { Button } from "./Button"; // Adjust the import path based on your project structure
+import { Button } from "./example"; // Adjust the import path based on your project structure
 
 describe("Button component", () => {
   it("renders with the correct label", () => {

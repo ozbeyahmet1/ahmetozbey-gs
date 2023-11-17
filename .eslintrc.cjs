@@ -15,6 +15,16 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "next",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
+  ],
+  overrides: [
+    {
+      files: ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+      rules: {
+        "storybook/hierarchy-separator": "error",
+      },
+    },
   ],
   rules: {
     "react/jsx-uses-react": "off",

@@ -1,16 +1,26 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { persistReducer, persistStore } from "redux-persist";
+import storage from "redux-persist/lib/storage"; // or another storage method
 
 import productWidgetReducer from "./store/slices/productWidgetSlice";
 
+const persistConfig = {
+  key: "root",
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, productWidgetReducer);
+
 export const store = configureStore({
   reducer: {
-    productWidgetReducer,
+    productWidgetReducer: persistedReducer,
   },
 });
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
+export const persistor = persistStore(store);
+
 export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
 
-export const example = (state: RootState) => state.productWidgetReducer.products;
+export const ProductWidgetState = (state: RootState) => state.productWidgetReducer.products;

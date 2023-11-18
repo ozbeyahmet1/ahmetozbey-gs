@@ -69,6 +69,7 @@
     "prettier": "latest",
     "react-redux": "^8.1.3",
     "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
     "sass-loader": "^13.3.2",
     "storybook": "^7.5.3",
     "style-loader": "^3.3.3",

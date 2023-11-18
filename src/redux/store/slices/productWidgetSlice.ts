@@ -37,8 +37,8 @@ const initialState: ProductWidgetState = {
   ],
 };
 
-export const exampleSlice = createSlice({
-  name: "example",
+export const productWidgetSlice = createSlice({
+  name: "productWidget",
   initialState,
   reducers: {
     changeColor: (state, action: PayloadAction<{ productId: number; newColor: Color }>) => {
@@ -91,6 +91,6 @@ export const exampleSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { changeColor, toggleLinked, activeStateChanger } = exampleSlice.actions;
+export const { changeColor, toggleLinked, activeStateChanger } = productWidgetSlice.actions;
 
-export default exampleSlice.reducer;
+export default productWidgetSlice.reducer;

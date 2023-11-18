@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import exampleReducer from "./slice/exampleSlice";
+
+import productWidgetReducer from "./store/slices/productWidgetSlice";
+
 export const store = configureStore({
   reducer: {
-    exampleReducer: exampleReducer,
+    productWidgetReducer,
   },
 });
 
@@ -11,4 +13,4 @@ export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
 
-export const example = (state: RootState) => state.exampleReducer.value;
+export const example = (state: RootState) => state.productWidgetReducer.products;

@@ -1,1 +1,131 @@
-{"v":4,"entries":{"components-card--docs":{"id":"components-card--docs","title":"Components/Card","name":"Docs","importPath":"./src/component/card/card.stories.tsx","type":"docs","tags":["autodocs","docs"],"storiesImports":[]},"components-card--card":{"type":"story","id":"components-card--card","name":"Card","title":"Components/Card","importPath":"./src/component/card/card.stories.tsx","tags":["autodocs","story"]},"components-checkbox--docs":{"id":"components-checkbox--docs","title":"Components/Checkbox","name":"Docs","importPath":"./src/component/checkbox/checkbox.stories.tsx","type":"docs","tags":["autodocs","docs"],"storiesImports":[]},"components-checkbox--checkbox":{"type":"story","id":"components-checkbox--checkbox","name":"Checkbox","title":"Components/Checkbox","importPath":"./src/component/checkbox/checkbox.stories.tsx","tags":["autodocs","story"]},"components-colorbadge--docs":{"id":"components-colorbadge--docs","title":"Components/ColorBadge","name":"Docs","importPath":"./src/component/colorBadge/colorBadge.stories.tsx","type":"docs","tags":["autodocs","docs"],"storiesImports":[]},"components-colorbadge--color-badges":{"type":"story","id":"components-colorbadge--color-badges","name":"Color Badges","title":"Components/ColorBadge","importPath":"./src/component/colorBadge/colorBadge.stories.tsx","tags":["autodocs","story"]},"example-button--docs":{"id":"example-button--docs","title":"Example/Button","name":"Docs","importPath":"./src/component/example/example.stories.tsx","type":"docs","tags":["autodocs","docs"],"storiesImports":[]},"example-button--primary":{"type":"story","id":"example-button--primary","name":"Primary","title":"Example/Button","importPath":"./src/component/example/example.stories.tsx","tags":["autodocs","story"]},"example-button--secondary":{"type":"story","id":"example-button--secondary","name":"Secondary","title":"Example/Button","importPath":"./src/component/example/example.stories.tsx","tags":["autodocs","story"]},"example-button--large":{"type":"story","id":"example-button--large","name":"Large","title":"Example/Button","importPath":"./src/component/example/example.stories.tsx","tags":["autodocs","story"]},"example-button--small":{"type":"story","id":"example-button--small","name":"Small","title":"Example/Button","importPath":"./src/component/example/example.stories.tsx","tags":["autodocs","story"]},"components-toggle--docs":{"id":"components-toggle--docs","title":"Components/Toggle","name":"Docs","importPath":"./src/component/toggle/toggle.stories.tsx","type":"docs","tags":["autodocs","docs"],"storiesImports":[]},"components-toggle--toggle":{"type":"story","id":"components-toggle--toggle","name":"Toggle","title":"Components/Toggle","importPath":"./src/component/toggle/toggle.stories.tsx","tags":["autodocs","story"]},"components-tooltip--docs":{"id":"components-tooltip--docs","title":"Components/Tooltip","name":"Docs","importPath":"./src/component/tooltip/tooltip.stories.tsx","type":"docs","tags":["autodocs","docs"],"storiesImports":[]},"components-tooltip--tooltip":{"type":"story","id":"components-tooltip--tooltip","name":"Tooltip","title":"Components/Tooltip","importPath":"./src/component/tooltip/tooltip.stories.tsx","tags":["autodocs","story"]}}}
+{
+  "v": 4,
+  "entries": {
+    "components-card--docs": {
+      "id": "components-card--docs",
+      "title": "Components/Card",
+      "name": "Docs",
+      "importPath": "./src/component/card/card.stories.tsx",
+      "type": "docs",
+      "tags": ["autodocs", "docs"],
+      "storiesImports": []
+    },
+    "components-card--card": {
+      "type": "story",
+      "id": "components-card--card",
+      "name": "Card",
+      "title": "Components/Card",
+      "importPath": "./src/component/card/card.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "components-checkbox--docs": {
+      "id": "components-checkbox--docs",
+      "title": "Components/Checkbox",
+      "name": "Docs",
+      "importPath": "./src/component/checkbox/checkbox.stories.tsx",
+      "type": "docs",
+      "tags": ["autodocs", "docs"],
+      "storiesImports": []
+    },
+    "components-checkbox--checkbox": {
+      "type": "story",
+      "id": "components-checkbox--checkbox",
+      "name": "Checkbox",
+      "title": "Components/Checkbox",
+      "importPath": "./src/component/checkbox/checkbox.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "components-colorbadge--docs": {
+      "id": "components-colorbadge--docs",
+      "title": "Components/ColorBadge",
+      "name": "Docs",
+      "importPath": "./src/component/colorBadge/colorBadge.stories.tsx",
+      "type": "docs",
+      "tags": ["autodocs", "docs"],
+      "storiesImports": []
+    },
+    "components-colorbadge--color-badges": {
+      "type": "story",
+      "id": "components-colorbadge--color-badges",
+      "name": "Color Badges",
+      "title": "Components/ColorBadge",
+      "importPath": "./src/component/colorBadge/colorBadge.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "example-button--docs": {
+      "id": "example-button--docs",
+      "title": "Example/Button",
+      "name": "Docs",
+      "importPath": "./src/component/example/example.stories.tsx",
+      "type": "docs",
+      "tags": ["autodocs", "docs"],
+      "storiesImports": []
+    },
+    "example-button--primary": {
+      "type": "story",
+      "id": "example-button--primary",
+      "name": "Primary",
+      "title": "Example/Button",
+      "importPath": "./src/component/example/example.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "example-button--secondary": {
+      "type": "story",
+      "id": "example-button--secondary",
+      "name": "Secondary",
+      "title": "Example/Button",
+      "importPath": "./src/component/example/example.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "example-button--large": {
+      "type": "story",
+      "id": "example-button--large",
+      "name": "Large",
+      "title": "Example/Button",
+      "importPath": "./src/component/example/example.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "example-button--small": {
+      "type": "story",
+      "id": "example-button--small",
+      "name": "Small",
+      "title": "Example/Button",
+      "importPath": "./src/component/example/example.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "components-toggle--docs": {
+      "id": "components-toggle--docs",
+      "title": "Components/Toggle",
+      "name": "Docs",
+      "importPath": "./src/component/toggle/toggle.stories.tsx",
+      "type": "docs",
+      "tags": ["autodocs", "docs"],
+      "storiesImports": []
+    },
+    "components-toggle--toggle": {
+      "type": "story",
+      "id": "components-toggle--toggle",
+      "name": "Toggle",
+      "title": "Components/Toggle",
+      "importPath": "./src/component/toggle/toggle.stories.tsx",
+      "tags": ["autodocs", "story"]
+    },
+    "components-tooltip--docs": {
+      "id": "components-tooltip--docs",
+      "title": "Components/Tooltip",
+      "name": "Docs",
+      "importPath": "./src/component/tooltip/tooltip.stories.tsx",
+      "type": "docs",
+      "tags": ["autodocs", "docs"],
+      "storiesImports": []
+    },
+    "components-tooltip--tooltip": {
+      "type": "story",
+      "id": "components-tooltip--tooltip",
+      "name": "Tooltip",
+      "title": "Components/Tooltip",
+      "importPath": "./src/component/tooltip/tooltip.stories.tsx",
+      "tags": ["autodocs", "story"]
+    }
+  }
+}

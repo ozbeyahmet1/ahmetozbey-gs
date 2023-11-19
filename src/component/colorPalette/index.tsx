@@ -13,11 +13,11 @@ interface ColorObject {
 
 export default function ColorPalette({ selectedColor, onChange }: ColorPaletteProps) {
   const colors: Array<ColorObject> = [
+    { name: "blue", value: "blue" },
+    { name: "green", value: "green" },
+    { name: "beige", value: "beige" },
     { name: "white", value: "white" },
     { name: "black", value: "black" },
-    { name: "green", value: "green" },
-    { name: "blue", value: "blue" },
-    { name: "beige", value: "beige" },
   ];
   return (
     <div className="colorPalette">

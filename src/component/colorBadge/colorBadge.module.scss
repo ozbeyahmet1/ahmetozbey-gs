@@ -1,0 +1,11 @@
+.colorBadge {
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: block;
+  &:hover {
+    opacity: 0.8;
+  }
+}

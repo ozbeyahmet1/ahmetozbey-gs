@@ -1,7 +1,7 @@
 // ColorBadge.test.tsx
 
 import { fireEvent, render } from "@testing-library/react";
-import { colorConverter } from "../../helpers/colorConverter";
+import { colorConverter } from "../../helpers/utils";
 import { Color } from "../../types";
 import ColorBadge from "./index";
 

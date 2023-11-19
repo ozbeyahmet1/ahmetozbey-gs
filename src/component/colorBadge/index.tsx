@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { colorConverter } from "../../helpers/colorConverter";
+import { colorConverter } from "../../helpers/utils";
 import { Color } from "../../types";
 
 export interface ColorBadgeProps {

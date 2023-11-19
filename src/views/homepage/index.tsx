@@ -1,9 +1,9 @@
-import { fetchProducts } from "@/redux/store/slices/productWidgetSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AnyAction } from "redux";
 import Card from "../../component/card";
 import { RootState } from "../../redux";
+import { fetchProducts } from "../../redux/store/slices/productWidgetSlice";
 
 export default function Homepage() {
   const products = useSelector((state: RootState) => state.productWidgetReducer.products);

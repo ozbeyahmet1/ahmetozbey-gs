@@ -48,6 +48,9 @@ The fundamental file structure and component types used in this project are as f
 |     ├── homepage.module.scss
 | ├── pages
 |   ├── index.tsx
+| ├── helpers
+| ├── layout
+| ├── redux
 └── ...
 ```
 

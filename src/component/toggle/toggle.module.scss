@@ -7,7 +7,6 @@
   position: relative;
   display: flex;
   align-items: center;
-
   &.checked {
     .toggle_track {
       background-color: var(--green);

@@ -1,40 +1,26 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 import { Color, ProductWidget } from "../../../types";
+
+export const fetchProducts = createAsyncThunk<Array<ProductWidget>, void>("productWidget/fetchProducts", async () => {
+  try {
+    const response = await axios.get("https://api.mocki.io/v2/016d11e8/product-widgets");
+    return response.data as Array<ProductWidget>;
+  } catch (error) {
+    throw new Error("Failed to fetch data from the API");
+  }
+});
 
 export interface ProductWidgetState {
   products: Array<ProductWidget>;
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
 }
 
 const initialState: ProductWidgetState = {
-  products: [
-    {
-      id: 1,
-      type: "plastic bottles",
-      amount: 100,
-      action: "collects",
-      active: true,
-      linked: true,
-      selectedColor: "green",
-    },
-    {
-      id: 2,
-      type: "trees",
-      amount: 10,
-      action: "plants",
-      active: false,
-      linked: false,
-      selectedColor: "black",
-    },
-    {
-      id: 3,
-      type: "carbon",
-      amount: 20,
-      action: "offsets",
-      active: false,
-      linked: false,
-      selectedColor: "blue",
-    },
-  ],
+  products: [],
+  status: "idle",
+  error: null,
 };
 
 export const productWidgetSlice = createSlice({
@@ -82,11 +68,29 @@ export const productWidgetSlice = createSlice({
             active: !product.active,
           };
         }
-        return product;
+        return {
+          ...product,
+          active: false,
+        };
       });
-
       state.products = updatedProducts;
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProducts.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.products = action.payload; // This line updates the products with the fetched data
+        state.error = null;
+        console.log(state);
+      })
+      .addCase(fetchProducts.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message || "Failed to fetch data";
+      });
   },
 });
 

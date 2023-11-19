@@ -1,9 +1,12 @@
+export type Color = "white" | "black" | "blue" | "green" | "beige";
+export type Action = "collects" | "plants" | "offsets";
+export type Type = "carbon" | "plastic bottles" | "trees";
 export interface ProductWidget {
   id: number;
-  type: 'carbon' | 'plastic bottles' | 'trees';
+  type: Type;
   amount: number;
-  action: 'collects' | 'plants' | 'offsets';
+  action: Action;
   active: boolean;
   linked: boolean;
-  selectedColor: 'white' | 'black' | 'blue' | 'green' | 'beige';
+  selectedColor: Color;
 }

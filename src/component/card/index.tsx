@@ -4,7 +4,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { colorConverter, fontColorMatcher } from "../../helpers/utils";
 import useBottomPosition from "../../hooks/usePosition";
-import { activeStateChanger, changeColor, toggleLinked } from "../../redux/store/slices/productWidgetSlice";
+import { changeActivity, changeColor, changeLinkedState } from "../../redux/store/slices/productWidgetSlice";
 import { Color, ProductWidget } from "../../types";
 import Checkbox from "../checkbox";
 import ColorPalette from "../colorPalette";
@@ -17,15 +17,14 @@ export default function Card({ action, active, amount, id, linked, selectedColor
   };
   const dispatch = useDispatch();
   const handleLinked = () => {
-    dispatch(toggleLinked({ productId: id }));
+    dispatch(changeLinkedState({ productId: id }));
   };
   const handleSetActive = () => {
-    dispatch(activeStateChanger({ productId: id }));
+    dispatch(changeActivity({ productId: id }));
   };
   const handleChangeColor = (newColor: Color) => {
     dispatch(changeColor({ productId: id, newColor }));
   };
-  const [showTooltip, setShowTooltip] = useState(false);
 
   {
     /* To ensure that the Tooltip component appears directly below the "Link to Public Profile" text,
@@ -40,6 +39,7 @@ export default function Card({ action, active, amount, id, linked, selectedColor
   const containerStyle: CSSProperties = {
     top: bottomPosition ? bottomPosition : 0,
   };
+  const [showTooltip, setShowTooltip] = useState(false);
   return (
     <div className="card">
       <div className="card--top" style={cardStyle}>

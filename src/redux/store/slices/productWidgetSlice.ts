@@ -42,7 +42,7 @@ export const productWidgetSlice = createSlice({
 
       state.products = updatedProducts;
     },
-    toggleLinked: (state, action: PayloadAction<{ productId: number }>) => {
+    changeLinkedState: (state, action: PayloadAction<{ productId: number }>) => {
       const { productId } = action.payload;
 
       const updatedProducts = state.products.map((product) => {
@@ -57,7 +57,7 @@ export const productWidgetSlice = createSlice({
 
       state.products = updatedProducts;
     },
-    activeStateChanger: (state, action: PayloadAction<{ productId: number }>) => {
+    changeActivity: (state, action: PayloadAction<{ productId: number }>) => {
       const { productId } = action.payload;
 
       // Set the active state to true for the specified product and false for others
@@ -95,6 +95,6 @@ export const productWidgetSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { changeColor, toggleLinked, activeStateChanger } = productWidgetSlice.actions;
+export const { changeColor, changeLinkedState, changeActivity } = productWidgetSlice.actions;
 
 export default productWidgetSlice.reducer;

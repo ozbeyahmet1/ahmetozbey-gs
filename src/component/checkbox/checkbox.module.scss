@@ -11,8 +11,8 @@
 }
 .checkbox_wrapper .cbx span:first-child {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 2px;
   transform: scale(1);
   vertical-align: middle;
@@ -22,8 +22,8 @@
 .checkbox_wrapper .cbx span:first-child svg {
   position: absolute;
   z-index: 1;
-  top: 8px;
-  left: 6px;
+  top: 5px;
+  left: 4px;
   fill: none;
   stroke: white;
   stroke-width: 2;

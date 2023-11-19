@@ -1,35 +1,30 @@
-import { ChangeEvent, useState } from "react";
-
 export interface CheckboxProps {
   label: string;
   checked: boolean;
-  onChange: (isChecked: boolean) => void;
+  onChange: () => void;
 }
 
 export default function Checkbox({ checked, label, onChange }: CheckboxProps) {
-  const [isChecked, setIsChecked] = useState(checked);
+  // Generate a unique id
+  const inputId = "cbx-" + Math.floor(Math.random() * 1000);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-
-    setIsChecked(event.target.checked);
-    onChange(event.target.checked);
-  };
   return (
     <div className="checkbox_wrapper">
       <input
         className="inp-cbx"
-        id="cbx-15"
+        id={inputId}
         type="checkbox"
         style={{ display: "none" }}
-        checked={isChecked}
-        onChange={handleChange}
+        checked={checked}
+        onChange={onChange}
       />
-      <label className="cbx" htmlFor="cbx-15">
+      <label className="cbx" htmlFor={inputId}>
         <span>
           <svg width="12px" height="9px" viewBox="0 0 12 9">
             <polyline points="1 5 4 8 11 1"></polyline>
           </svg>
         </span>
+        {label}
       </label>
     </div>
   );

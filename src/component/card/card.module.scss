@@ -17,6 +17,9 @@
       cursor: pointer;
     }
   }
+  &--preventClick {
+    cursor: not-allowed;
+  }
   &_description {
     font-size: 12px;
     font-weight: 400;

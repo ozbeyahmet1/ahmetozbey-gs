@@ -64,11 +64,16 @@ export default function Card({ action, active, amount, id, linked, selectedColor
               <AiOutlineInfoCircle size={12} />
             </div>
           </div>
-          <Checkbox checked={linked} label="" onChange={handleLinked} />
+          <Checkbox checked={linked} label="" onChange={active ? handleLinked : undefined} />
         </div>
         <div className="card_block">
           <p>Badge Color</p>
-          <ColorPalette selectedColor={selectedColor} onChange={handleChangeColor} />
+          {active
+            ? <ColorPalette selectedColor={selectedColor} onChange={handleChangeColor} />
+            :
+            <ColorPalette selectedColor={selectedColor} onChange={handleChangeColor} />
+          }
+
         </div>
         <div className="card_block">
           <p>Activate Badge</p>

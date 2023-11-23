@@ -6,10 +6,9 @@ export interface ColorBadgeProps {
   isSelected: boolean;
   background: Color;
   onChange?: (newColor: Color) => void;
-  isItEditable: boolean;
 }
 
-export default function ColorBadge({ isSelected, background, onChange, isItEditable }: ColorBadgeProps) {
+export default function ColorBadge({ isSelected, background, onChange }: ColorBadgeProps) {
   const onClickFunc: MouseEventHandler<HTMLSpanElement> = (event) => {
     if (onChange) {
       onChange(background);
@@ -22,7 +21,7 @@ export default function ColorBadge({ isSelected, background, onChange, isItEdita
   return (
     <span
       style={containerStyle}
-      className={isItEditable ? "colorBadge" : "colorBadge clickNotAllowed"}
+      className={onChange != undefined ? "colorBadge" : "colorBadge clickNotAllowed"}
       onClick={onClickFunc}
       data-testid="colorBadge"></span>
   );

@@ -4,7 +4,6 @@ import ColorBadge from "../colorBadge";
 export interface ColorPaletteProps {
   selectedColor: Color;
   onChange?: (newColor: Color) => void;
-  isItEditable?: boolean;
 }
 
 interface ColorObject {
@@ -12,7 +11,7 @@ interface ColorObject {
   value: Color;
 }
 
-export default function ColorPalette({ selectedColor, onChange, isItEditable = false }: ColorPaletteProps) {
+export default function ColorPalette({ selectedColor, onChange }: ColorPaletteProps) {
   const colors: Array<ColorObject> = [
     { name: "blue", value: "blue" },
     { name: "green", value: "green" },
@@ -29,7 +28,6 @@ export default function ColorPalette({ selectedColor, onChange, isItEditable = f
             isSelected={selectedColor == color.value ? true : false}
             key={color.name}
             onChange={onChange}
-            isItEditable={isItEditable}
           />
         );
       })}

@@ -71,7 +71,7 @@ export default function Card({ action, active, amount, id, linked, selectedColor
           {active
             ? <ColorPalette selectedColor={selectedColor} onChange={handleChangeColor} />
             :
-            <ColorPalette selectedColor={selectedColor} onChange={handleChangeColor} />
+            <ColorPalette selectedColor={selectedColor} onChange={undefined} />
           }
 
         </div>

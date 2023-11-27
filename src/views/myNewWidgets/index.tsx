@@ -16,17 +16,17 @@ import {
 } from "../../redux/store/slices/productWidgetSlice";
 import { Color, ProductWidget } from "../../types";
 
-export default function NewPage() {
+export default function MyNewWidgets() {
   const products = useSelector((state: RootState) => state.productWidgetReducer.products);
+  const myProducts = products.filter((product) => product.linked == true);
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (!(products.length > 0)) {
       dispatch(fetchProducts() as unknown as AnyAction);
     }
   }, [dispatch, products]);
 
-  const addItem = () => {
+  const x = () => {
     dispatch(
       addProduct({
         id: products.length,
@@ -34,7 +34,7 @@ export default function NewPage() {
         amount: 100,
         action: "offsets",
         active: false,
-        linked: false,
+        linked: true,
         selectedColor: "beige",
       }),
     );
@@ -71,14 +71,15 @@ export default function NewPage() {
       <main className="newPage_main">
         <div className="newPage_page">
           <h1 className="newPage_welcome">Welcome</h1>
-
-          <h2 className="newPage_subhead">Add Product Widgets</h2>
-
+          <div className="content">
+            <h2 className="text_shadows">Welcome</h2>
+          </div>
+          <h3 className="newPage_subText">Hello</h3>
           <div className="newPage_productGrid">
-            {products.map((product, i) => {
+            {myProducts.map((product, i) => {
               return <NewCard {...product} key={i} onClick={() => selectWidget(product.id)} />;
             })}
-            <button onClick={addItem} className="newPage_addButton">
+            <button onClick={x} className="newPage_addButton">
               <Image
                 src="https://res.cloudinary.com/droheqpxn/image/upload/v1701059357/grenspark/64ee7702e1535d559ea0cf8d_leaf-top-blue-business_rj5iig.svg"
                 width={100}

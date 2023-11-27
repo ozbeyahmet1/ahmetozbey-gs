@@ -18,3 +18,8 @@
     align-items: end;
   }
 }
+@media (max-width: 768px) {
+  .sidebar {
+    width: 10%;
+  }
+}

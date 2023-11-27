@@ -75,6 +75,14 @@ export const productWidgetSlice = createSlice({
       });
       state.products = updatedProducts;
     },
+    addProduct: (state, action: PayloadAction<ProductWidget>) => {
+      const newProduct = action.payload;
+      state.products.push(newProduct);
+    },
+    deleteProduct: (state, action: PayloadAction<number>) => {
+      const productIdToDelete = action.payload;
+      state.products = state.products.filter((product) => product.id !== productIdToDelete);
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -95,6 +103,6 @@ export const productWidgetSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { changeColor, changeLinkedState, changeActivity } = productWidgetSlice.actions;
+export const { changeColor, changeLinkedState, changeActivity, addProduct, deleteProduct } = productWidgetSlice.actions;
 
 export default productWidgetSlice.reducer;

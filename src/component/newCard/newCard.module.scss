@@ -1,0 +1,52 @@
+.newCard {
+  position: relative;
+  z-index: 99;
+  height: auto;
+  border-radius: 7.5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  animation: bubble 0.4s ease-in-out;
+  &_image {
+    position: absolute;
+    top: -10px;
+    filter: saturate(5);
+  }
+  &_inline {
+    padding: 15px;
+  }
+  &_edit {
+    cursor: pointer;
+  }
+  &--top {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_activity {
+    &--red,
+    &--green {
+      padding: 5px 25px;
+      background-color: rgb(214, 45, 45);
+      border-radius: 5px;
+      color: white;
+      margin-bottom: 5px;
+      width: fit-content;
+    }
+    &--red {
+      background-color: #fa533c;
+    }
+    &--green {
+      background-color: rgb(56, 195, 56);
+    }
+  }
+  &_linked {
+    height: 35px;
+  }
+  &_action {
+    font-size: 20px;
+  }
+  &_amount {
+    font-size: 16px;
+    color: rgb(178, 178, 178);
+  }
+}

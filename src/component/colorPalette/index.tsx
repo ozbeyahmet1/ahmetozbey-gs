@@ -21,7 +21,7 @@ export default function ColorPalette({ selectedColor, onChange }: ColorPalettePr
   ];
   return (
     <div className="colorPalette">
-      {colors.map((color, i) => {
+      {colors.map((color, _) => {
         return (
           <ColorBadge
             background={color.value}

@@ -1,0 +1,79 @@
+.newPage {
+  background-color: var(--greyV2);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  font-family: "Mulish", sans-serif;
+  overflow-x: hidden;
+  &_main {
+    width: 80%;
+    margin-left: 20%;
+    padding: 100px 50px;
+    padding-left: 0;
+    height: 100%;
+    padding-bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+  }
+  &_page {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+  }
+  &_welcome {
+    color: rgb(107, 95, 190);
+    font-size: 90px;
+  }
+  &_subhead {
+    margin-bottom: 20px;
+  }
+  &_productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    height: 100%;
+    background-color: white;
+    padding-bottom: 150px;
+    width: 100%;
+  }
+  &_addButton {
+    background-color: #e57066;
+    border-radius: 10px;
+    border: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    min-height: 190px;
+    &:hover {
+      border: 2px solid black;
+      color: black;
+    }
+  }
+  &_buttonImage {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newPage {
+    &_main {
+      width: 90%;
+      margin-left: 10%;
+      padding-left: 0px;
+      padding-right: 20px;
+    }
+    &_welcome {
+      color: rgb(107, 95, 190);
+      font-size: 20px;
+    }
+    &_page {
+      padding: 20px;
+    }
+  }
+}

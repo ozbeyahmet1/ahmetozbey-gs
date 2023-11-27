@@ -26,7 +26,7 @@ export default function MyNewWidgets() {
     }
   }, [dispatch, products]);
 
-  const x = () => {
+  const addItem = () => {
     dispatch(
       addProduct({
         id: products.length,
@@ -71,15 +71,11 @@ export default function MyNewWidgets() {
       <main className="newPage_main">
         <div className="newPage_page">
           <h1 className="newPage_welcome">Welcome</h1>
-          <div className="content">
-            <h2 className="text_shadows">Welcome</h2>
-          </div>
-          <h3 className="newPage_subText">Hello</h3>
           <div className="newPage_productGrid">
             {myProducts.map((product, i) => {
               return <NewCard {...product} key={i} onClick={() => selectWidget(product.id)} />;
             })}
-            <button onClick={x} className="newPage_addButton">
+            <button onClick={addItem} className="newPage_addButton">
               <Image
                 src="https://res.cloudinary.com/droheqpxn/image/upload/v1701059357/grenspark/64ee7702e1535d559ea0cf8d_leaf-top-blue-business_rj5iig.svg"
                 width={100}

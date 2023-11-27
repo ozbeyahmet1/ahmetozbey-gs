@@ -29,7 +29,7 @@ export default function MyNewWidgets() {
   const addItem = () => {
     dispatch(
       addProduct({
-        id: products.length + 1,
+        id: (products.length + 1),
         type: "trees",
         amount: 100,
         action: "offsets",

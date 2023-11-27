@@ -1,0 +1,33 @@
+.newCard {
+  position: relative;
+  z-index: 99;
+  height: 100%;
+  border-radius: 7.5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  &_image {
+    position: absolute;
+    top: -10px;
+    filter: saturate(5);
+  }
+  &_inline {
+    padding: 15px;
+  }
+  &--top {
+    margin-bottom: 50px;
+  }
+  &_activity {
+    padding: 5px 25px;
+    background-color: rgb(214, 45, 45);
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 5px;
+    width: fit-content;
+  }
+  &_action {
+    font-size: 20px;
+  }
+  &_amount {
+    font-size: 16px;
+    color: rgb(178, 178, 178);
+  }
+}

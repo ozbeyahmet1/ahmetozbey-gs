@@ -1,5 +1,5 @@
-import { Color, ProductWidget } from "@/types";
 import { useEffect, useState } from "react";
+import { Color, ProductWidget } from "../../types";
 import Checkbox from "../checkbox";
 import ColorPalette from "../colorPalette";
 import NewCard from "../newCard";
@@ -12,7 +12,7 @@ export interface DrawerProps {
   handleChangeColor: (newColor: Color) => void;
 }
 
-export default function Drawer({ card, handleLinked, handleSetActive, handleChangeColor, showDrawer }: DrawerProps) {
+export default function Drawer({ card, handleLinked, handleSetActive, handleChangeColor }: DrawerProps) {
   const [showError, setShowError] = useState(false);
   useEffect(() => {
     if (card.active) {
